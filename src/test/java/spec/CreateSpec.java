@@ -1,6 +1,5 @@
 package spec;
 
-import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
@@ -15,7 +14,6 @@ public class CreateSpec {
 
 
     public static RequestSpecification requestSpec = with()
-            .filter(new AllureRestAssured())
             .filter(withCustomTemplates())
             .log().uri()
             .log().body()
